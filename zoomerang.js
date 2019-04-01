@@ -257,7 +257,7 @@
             if (options.onBeforeClose) options.onBeforeClose(target)
 
             var p  = placeholder.getBoundingClientRect(),
-                dx = p.left - (window.innerWidth - p.width) / 2,
+                dx = p.left + (window.innerWidth - document.body.clientWidth) / 2 - (window.innerWidth - p.width) / 2,
                 dy = p.top - (window.innerHeight - p.height) / 2
 
             overlay.style.opacity = 0
